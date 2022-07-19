@@ -9,44 +9,43 @@ while True:
     '''))
     pomodoros = int(input('''Quantos pomodoros?'''))
 
-    for pomodoros in range(1, pomodoros + 1):
+    for pomodoros in range(0, pomodoros):
         if minutos == 1:
-            for i in range(20, 0, -1):
+            for i in range(5, 0, -1):
                 print(i)
-                sleep(60)
+                sleep(1)
             for i in range(5, 0, -1):
                 if pomodoros % 4 == 0:
                     continue
                 else:
-                    print('5 minutos de descanso')
-                    sleep(60)
+                    print(f'{i} minutos de descanso')
+                    sleep(1)
         elif minutos == 2:
-            for i in range(25, 0, -1):
+            for i in range(7, 0, -1):
                 print(i)
-                sleep(60)
+                sleep(1)
             for i in range(7, 0, -1):
                 if pomodoros % 4 == 0:
                     continue
                 else:
-                    print('7 minutos de descanso')
-                    sleep(60)
+                    print(f'{i} minutos de descanso')
+                    sleep(1)
         elif minutos == 3:
-            for i in range(30, 0, -1):
+            for i in range(10, 0, -1):
                 print(i)
-                sleep(60)
+                sleep(1)
             for i in range(10, 0, -1):
                 if pomodoros % 4 == 0:
                     continue
                 else:
-                    print('10 minutos de descanso')
-                    sleep(60)
+                    print(f'{i} minutos de descanso')
+                    sleep(1)
 
-        if pomodoros == 4:
+        if pomodoros % 4 == 0:
             print(f'Você completou {pomodoros} pomodoros, descanse um pouco mais')
-            for i in range(20, 0, -1):
-                sleep(60)
-                if i == 1:
-                    print(i)
+            for i in range(5, 0, -1):
+                sleep(1)
+                print(i)
 
     sessao = input('Você concluiu sua sessão! Deseja continuar (S/N)? ')
     if sessao.upper() == "N":
