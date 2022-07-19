@@ -1,3 +1,3 @@
-# pomopy :tomato::hourglass_flowing_sand:
-## Timer simples que aplica a técnica pomodoro, em Python
-## Posteriormente, com GUI
+# POMOPY :tomato::hourglass_flowing_sand:
+## Gerenciador de tempo feito em Python, usando a técnica POMODORO, muito difundida e utilizada!
+## 
