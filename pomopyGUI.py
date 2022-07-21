@@ -55,7 +55,11 @@ def pomopy():
     ]
 
 
-    window = sg.Window('POMOPY', size=(800, 500), layout=layout, font=('Orbitron', 12))
+    window = sg.Window(
+        'POMOPY', size=(800, 500), layout=layout, font=('Orbitron', 12), use_custom_titlebar=True,
+        titlebar_background_color=sg.theme_background_color(), titlebar_text_color=sg.theme_text_color(),
+        titlebar_font='Orbitron', titlebar_icon='icone_pomopy.png'
+    )
     minutos = 0
 
     while True:
@@ -77,9 +81,11 @@ def pomopy():
 
         if event in (sg.WINDOW_CLOSED, sg.WIN_CLOSE_ATTEMPTED_EVENT):
             break 
-        elif minutos == 0:
+
+        if minutos == 0:
             continue
-        elif event == '-CANCELAR-':
+        
+        if event == '-CANCELAR-':
             minutos = 0
             pomodoros = 0
             window['-TEXTO-'].update('')
